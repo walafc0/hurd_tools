@@ -1,7 +1,17 @@
 Créer une image de 1Go Arch Hurd avec une seule partition
 
-Install de GRUB: faut faire deux fois
+* Dépendances: pacman, qemu
+
+* Faut lancer all.sh en root
+
+* Install de GRUB: faut faire deux fois
   root(hd0,0)
   setup(hd0)
 
-Faut lancer all.sh en root
+* Configuration
+  * ajouter myhost dans /etc/hosts
+  * ajouter le translator pour le net
+  * décommenter /etc/locale.gen et lancer la commande
+
+
+
