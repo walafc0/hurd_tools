@@ -14,9 +14,9 @@ Créer une image de 1Go Arch Hurd avec une seule partition
 * La première fois -> halt, et la seconde -> reboot
 
 * Configuration
+  * ajouter -f à la ligne de boot de grub
   * ajouter myhost dans /etc/hosts
-  * ajouter le translator pour le net
   * décommenter /etc/locale.gen et lancer la commande
-
-
-
+  * ajouter le translator pour le net
+  * décommenter les mirroirs dans /etc/pacman.d/mirrorlist
+  * pacman -Syu
