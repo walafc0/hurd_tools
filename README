@@ -1,5 +1,8 @@
 Créer une image de 1Go Arch Hurd avec une seule partition
+===
 
+* loopback: /dev/loop0
+* mountpoint: /mnt
 * Dépendances: pacman, qemu
 
 * Faut lancer all.sh en root
@@ -7,6 +10,8 @@ Créer une image de 1Go Arch Hurd avec une seule partition
 * Install de GRUB: faut faire deux fois
   root(hd0,0)
   setup(hd0)
+
+* La première fois -> halt, et la seconde -> reboot
 
 * Configuration
   * ajouter myhost dans /etc/hosts
