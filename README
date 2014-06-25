@@ -1,22 +1,19 @@
-Créer une image de 1Go Arch Hurd avec une seule partition
-===
+Create Arch Hurd virtual machine
+================================
 
 * loopback: /dev/loop0
 * mountpoint: /mnt
-* Dépendances: pacman, qemu
+* Depends: pacman, qemu-{*}
 
-* Faut lancer all.sh en root
+* all.sh must be launch with root account (not sudo)
 
-* Install de GRUB: faut faire deux fois
+* GRUB: repeat this operation twice:
   root(hd0,0)
   setup(hd0)
-
-* La première fois -> halt, et la seconde -> reboot
+* First time -> halt, second time -> reboot
 
 * Configuration
-  * ajouter -f à la ligne de boot de grub
-  * ajouter myhost dans /etc/hosts
-  * décommenter /etc/locale.gen et lancer la commande
-  * ajouter le translator pour le net
-  * décommenter les mirroirs dans /etc/pacman.d/mirrorlist
-  * pacman -Syu
+  * add net translator
+  * /etc/resolv.conf -> nameserver 8.8.8.8
+  * wget http://files.walafc0.org/archhurd/img/config/config.sh
+  * ./config.sh (with root account)
