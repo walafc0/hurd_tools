@@ -30,5 +30,6 @@ mkdir $MP/var/lib/pacman -p
 pacman --noconfirm --config pachurd.conf -Sy
 pacman --noconfirm --config pachurd.conf -S base base-devel
 cp -a $MP/lib/grub/i386-pc/* $MP/boot/grub/
+curl -u walafc0 -H "Accept: application/vnd.github.raw" "https://api.github.com/repos/walafc0/hurd_tools/contents/ssh.sh" > $MP/root/ssh.sh
 umount $MP
 losetup -d $LOOP
