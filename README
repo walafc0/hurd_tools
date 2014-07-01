@@ -17,3 +17,7 @@ Create Arch Hurd virtual machine
   * /etc/resolv.conf -> nameserver 8.8.8.8
   * wget http://files.walafc0.org/archhurd/img/config/config.sh
   * ./config.sh (with root account)
+
+* ssh.sh:
+  * start sshd on host, create virtual network device and try to connect to VM
+  * Warning: you need to start sshd on guest and create ssh tunnel
