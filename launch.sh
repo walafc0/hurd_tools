@@ -7,7 +7,7 @@ IMG=$(pwd)/disk/hurd.img
 SWAP=$(pwd)/disk/swap.img
 
 NET="-net nic,vlan=1,model=pcnet -net user,vlan=1"
-OPT="-no-frame -ctrl-grab -smp 2 -m 2048"
+OPT="-no-frame -ctrl-grab -smp 2 -m 2048 -enable-kvm"
 
 if [ "$1" = "grub" ]; then
   $QEMU -hda $IMG -fda iso/grub.img -boot a $NET

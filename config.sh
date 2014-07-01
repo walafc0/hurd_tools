@@ -14,7 +14,7 @@ wget -O mirrorlist  http://files.walafc0.org/archhurd/img/config/mirrorlist
 
 pacman -Syu --noconfirm sudo openssh emacs-nox htop
 groupadd sudo
-export EDITOR=emacs
+export EDITOR=nano
 visudo
 useradd -m -G users,sudo -s /bin/bash user
 passwd user
